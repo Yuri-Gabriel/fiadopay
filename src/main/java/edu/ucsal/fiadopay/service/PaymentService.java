@@ -1,11 +1,12 @@
 package edu.ucsal.fiadopay.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.ucsal.fiadopay.controller.PaymentRequest;
-import edu.ucsal.fiadopay.controller.PaymentResponse;
-import edu.ucsal.fiadopay.domain.Merchant;
-import edu.ucsal.fiadopay.domain.Payment;
-import edu.ucsal.fiadopay.domain.WebhookDelivery;
+
+import edu.ucsal.fiadopay.controller.request.PaymentRequest;
+import edu.ucsal.fiadopay.controller.response.PaymentResponse;
+import edu.ucsal.fiadopay.model.Merchant;
+import edu.ucsal.fiadopay.model.Payment;
+import edu.ucsal.fiadopay.model.WebhookDelivery;
 import edu.ucsal.fiadopay.repo.MerchantRepository;
 import edu.ucsal.fiadopay.repo.PaymentRepository;
 import edu.ucsal.fiadopay.repo.WebhookDeliveryRepository;

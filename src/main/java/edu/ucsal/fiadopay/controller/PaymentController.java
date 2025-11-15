@@ -1,5 +1,10 @@
 package edu.ucsal.fiadopay.controller;
 
+import edu.ucsal.fiadopay.annotation.logs.Logger;
+
+import edu.ucsal.fiadopay.controller.request.PaymentRequest;
+import edu.ucsal.fiadopay.controller.request.RefundRequest;
+import edu.ucsal.fiadopay.controller.response.PaymentResponse;
 import edu.ucsal.fiadopay.service.PaymentService;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +19,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 public class PaymentController {
   private final PaymentService service;
 
+  @Logger
   @PostMapping("/payments")
   @SecurityRequirement(name = "bearerAuth")
   public ResponseEntity<PaymentResponse> create(
@@ -25,11 +31,13 @@ public class PaymentController {
     return ResponseEntity.status(HttpStatus.CREATED).body(resp);
   }
 
+  @Logger
   @GetMapping("/payments/{id}")
   public PaymentResponse get(@PathVariable String id) {
     return service.getPayment(id);
   }
 
+  @Logger
   @PostMapping("/refunds")
   @SecurityRequirement(name = "bearerAuth")
   public java.util.Map<String,Object> refund(@Parameter(hidden = true) @RequestHeader("Authorization") String auth,

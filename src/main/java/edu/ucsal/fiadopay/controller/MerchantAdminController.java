@@ -1,6 +1,8 @@
 package edu.ucsal.fiadopay.controller;
 
-import edu.ucsal.fiadopay.domain.Merchant;
+import edu.ucsal.fiadopay.annotation.logs.Logger;
+import edu.ucsal.fiadopay.controller.dto.MerchantCreateDTO;
+import edu.ucsal.fiadopay.model.Merchant;
 import edu.ucsal.fiadopay.repo.MerchantRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,7 @@ import java.util.UUID;
 public class MerchantAdminController {
   private final MerchantRepository merchants;
 
+  @Logger
   @PostMapping
   public Merchant create(@Valid @RequestBody MerchantCreateDTO dto) {
     if (merchants.existsByName(dto.name())) {
