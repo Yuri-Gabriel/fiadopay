@@ -9,10 +9,25 @@ import org.springframework.stereotype.Component;
 @Component
 public class PaymentMethodAspect {
     @Around("@annotation(PaymentMethod)")
-    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+    public Object around(ProceedingJoinPoint joinPoint, PaymentMethod paymentMethod) throws Throwable {
 
+        Object[] args = joinPoint.getArgs();
+        for (Object arg : args) {
+            //validate(arg, paymentMethod);
+        }
 
-        return null;
+        return joinPoint.proceed();
+    }
+
+    private void validate(Object target, MerchantStatus annotation) {
+        Status allowed = annotation.allowed();
+        Status current = getStatus(target);
+
+        if (!current.equals(allowed)) {
+            throw new IllegalStateException(
+                "Merchant com status inválido! Atual: " + current + " — Permitido: " + allowed
+            );
+        }
     }
 }
 
