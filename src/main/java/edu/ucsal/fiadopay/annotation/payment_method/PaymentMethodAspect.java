@@ -13,20 +13,36 @@ public class PaymentMethodAspect {
 
         Object[] args = joinPoint.getArgs();
         for (Object arg : args) {
-            //validate(arg, paymentMethod);
+            validate(arg, paymentMethod);
         }
 
         return joinPoint.proceed();
     }
 
-    private void validate(Object target, MerchantStatus annotation) {
-        Status allowed = annotation.allowed();
-        Status current = getStatus(target);
+    private void validate(Object target, PaymentMethod annotation) {
+        EPaymentMethod[] methods = annotation.methods();
+        String current = getMethod(target);
+        boolean accept = false;
 
-        if (!current.equals(allowed)) {
+        for(int i = 0; i <= methods.length - 1; i++) {
+            accept = methods[i].value.equals(current);
+
+            if(accept) break;
+        }
+        if (!accept) {
             throw new IllegalStateException(
-                "Merchant com status inválido! Atual: " + current + " — Permitido: " + allowed
+                String.format("Metodo de pagamento não aceito: %s", current)
             );
+        }
+    }
+
+    private String getMethod(Object target) {
+        try {
+            Field field = target.getClass().getDeclaredField("method");
+            field.setAccessible(true);
+            return (Strign) field.get(target);
+        } catch (Exception e) {
+            throw new RuntimeException("Objeto não possui campo 'status'.");
         }
     }
 }
