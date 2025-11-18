@@ -4,10 +4,9 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
-
 import org.springframework.stereotype.Component;
+
+import edu.ucsal.fiadopay.annotation.logs.Logger;
 
 @Aspect
 @Component
@@ -17,10 +16,14 @@ public class LoggerAspect {
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         long inicio = System.currentTimeMillis();
         Object result = joinPoint.proceed();
-        long fim = System.currentTimeMillis() - inicio;
+        Thread.sleep(100);
+        long fim = System.currentTimeMillis();
+        long tempoMs = fim - inicio;
 
-        Logger logger = LoggerFactory.getLogger(joinPoint.getTarget().getClass());
-        logger.info("{} ---------------------executado em {} ms", joinPoint.getSignature(), fim);
+        Log log = Log.getInstance();
+        log.info(
+            String.format("Função %s executada em %d ms", joinPoint.getSignature(), tempoMs)
+        );
         return result;
     }
 }

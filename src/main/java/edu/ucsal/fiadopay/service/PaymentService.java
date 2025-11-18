@@ -41,6 +41,7 @@ public class PaymentService {
   private final ObjectMapper objectMapper;
   private volatile long lastActivity = System.currentTimeMillis();
   private final ScheduledExecutorService watchdog = Executors.newScheduledThreadPool(1);
+  private final WebhookService webService;
 
   @Value("${fiadopay.webhook-secret}")
   String secret;
@@ -49,12 +50,12 @@ public class PaymentService {
   @Value("${fiadopay.failure-rate}")
   double failRate;
 
-  public PaymentService(MerchantRepository merchants, PaymentRepository payments, WebhookDeliveryRepository deliveries,
-      ObjectMapper objectMapper) {
+  public PaymentService(MerchantRepository merchants, PaymentRepository payments, WebhookDeliveryRepository deliveries, ObjectMapper objectMapper, WebhookService webService) {
     this.merchants = merchants;
     this.payments = payments;
     this.deliveries = deliveries;
     this.objectMapper = objectMapper;
+
     // acrescentando logica do watchdog
     watchdog.scheduleAtFixedRate(() -> {
       long e = System.currentTimeMillis() - lastActivity;
@@ -64,6 +65,8 @@ public class PaymentService {
         System.gc();
       }
     }, 10, 10, TimeUnit.SECONDS);
+
+    this.webService = webService;
   }
 
   private Merchant merchantFromAuth(String auth) {
@@ -145,8 +148,10 @@ public class PaymentService {
     p.setStatus(Payment.Status.REFUNDED);
     p.setUpdatedAt(Instant.now());
     payments.save(p);
-    sendWebhook(p);
-    return Map.of("id", "ref_" + UUID.randomUUID(), "status", "PENDING");
+    
+    this.webService.sendWebhookAsync(() -> sendWebhook(p));
+    
+    return Map.of("id","ref_"+UUID.randomUUID(),"status","PENDING");
   }
 
   private void processAndWebhook(String paymentId) {
@@ -163,7 +168,7 @@ public class PaymentService {
     p.setUpdatedAt(Instant.now());
     payments.save(p);
 
-    sendWebhook(p);
+    this.webService.sendWebhookAsync(() -> sendWebhook(p));
   }
 
   private void sendWebhook(Payment p) {
