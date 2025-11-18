@@ -6,7 +6,6 @@ import edu.ucsal.fiadopay.controller.response.TokenResponse;
 import edu.ucsal.fiadopay.model.Merchant;
 import edu.ucsal.fiadopay.repo.MerchantRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -17,11 +16,10 @@ import jakarta.validation.Valid;
 @RequestMapping("/fiadopay/auth")
 @RequiredArgsConstructor
 public class AuthController {
-  @Autowired
   private final MerchantRepository merchants;
 
-  @PostMapping("/token")
   @Logger
+  @PostMapping("/token")
   public TokenResponse token(@RequestBody @Valid TokenRequest req) {
     var merchant = merchants.findByClientId(req.client_id())
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED));

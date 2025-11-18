@@ -34,16 +34,18 @@ public class PaymentService {
   private final PaymentRepository payments;
   private final WebhookDeliveryRepository deliveries;
   private final ObjectMapper objectMapper;
+  private final WebhookService webService;
 
   @Value("${fiadopay.webhook-secret}") String secret;
   @Value("${fiadopay.processing-delay-ms}") long delay;
   @Value("${fiadopay.failure-rate}") double failRate;
 
-  public PaymentService(MerchantRepository merchants, PaymentRepository payments, WebhookDeliveryRepository deliveries, ObjectMapper objectMapper) {
+  public PaymentService(MerchantRepository merchants, PaymentRepository payments, WebhookDeliveryRepository deliveries, ObjectMapper objectMapper, WebhookService webService) {
     this.merchants = merchants;
     this.payments = payments;
     this.deliveries = deliveries;
     this.objectMapper = objectMapper;
+    this.webService = webService;
   }
 
   private Merchant merchantFromAuth(String auth){
@@ -121,7 +123,9 @@ public class PaymentService {
     p.setStatus(Payment.Status.REFUNDED);
     p.setUpdatedAt(Instant.now());
     payments.save(p);
-    sendWebhook(p);
+
+    this.webService.sendWebhookAsync(() -> sendWebhook(p));
+    
     return Map.of("id","ref_"+UUID.randomUUID(),"status","PENDING");
   }
 
@@ -135,7 +139,7 @@ public class PaymentService {
     p.setUpdatedAt(Instant.now());
     payments.save(p);
 
-    sendWebhook(p);
+    this.webService.sendWebhookAsync(() -> sendWebhook(p));
   }
 
   private void sendWebhook(Payment p){
