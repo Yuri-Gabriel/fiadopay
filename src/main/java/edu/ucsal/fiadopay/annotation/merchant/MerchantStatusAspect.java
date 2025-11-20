@@ -13,7 +13,7 @@ import edu.ucsal.fiadopay.annotation.logs.Logger;
 @Component
 public class MerchantStatusAspect {
   @Logger
-  @Around("@annotation(MerchantStatus)")
+  @Around("@annotation(merchantstatus)")
   public Object around(ProceedingJoinPoint joinPoint, MerchantStatus merchantStatus) throws Throwable {
 
     Object[] args = joinPoint.getArgs();
