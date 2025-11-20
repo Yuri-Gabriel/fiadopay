@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class PaymentMethodAspect {
-    @Around("@annotation(PaymentMethod)")
+    @Around("@annotation(paymentmethod)")
     public Object around(ProceedingJoinPoint joinPoint, PaymentMethod paymentMethod) throws Throwable {
 
         Object[] args = joinPoint.getArgs();
