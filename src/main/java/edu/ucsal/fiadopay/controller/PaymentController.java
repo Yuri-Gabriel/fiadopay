@@ -2,6 +2,7 @@ package edu.ucsal.fiadopay.controller;
 
 import edu.ucsal.fiadopay.annotation.logs.Logger;
 import edu.ucsal.fiadopay.annotation.VelocityCheck;
+import edu.ucsal.fiadopay.annotation.refundable.Refundable;
 import edu.ucsal.fiadopay.controller.request.PaymentRequest;
 import edu.ucsal.fiadopay.controller.request.RefundRequest;
 import edu.ucsal.fiadopay.controller.response.PaymentResponse;
@@ -42,9 +43,11 @@ public class PaymentController {
 
   @Logger(file = "payment.log")
   @PostMapping("/refunds")
+  @Refundable(days = 20)
   @SecurityRequirement(name = "bearerAuth")
   public java.util.Map<String,Object> refund(@Parameter(hidden = true) @RequestHeader("Authorization") String auth,
                                    @RequestBody @Valid RefundRequest body) {
     return service.refund(auth, body.paymentId());
   }
 }
+ 
