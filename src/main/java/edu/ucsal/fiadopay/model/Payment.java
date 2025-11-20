@@ -1,9 +1,13 @@
 package edu.ucsal.fiadopay.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 import java.math.BigDecimal;
 import java.time.Instant;
+
+import edu.ucsal.fiadopay.annotation.payment_method.EPaymentMethod;
+import edu.ucsal.fiadopay.annotation.payment_method.PaymentMethod;
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
@@ -20,8 +24,10 @@ public class Payment {
     @Column(nullable = false)
     private Long merchantId;
 
+    @Valid
+    @PaymentMethod(methods = {EPaymentMethod.DEBITO, EPaymentMethod.PIX})
     @Column(nullable = false, length = 20)
-    private String method; // CARD|PIX|DEBIT|BOLETO
+    private String method;
 
     @Column(nullable = false, precision = 19, scale = 2)
     private BigDecimal amount;

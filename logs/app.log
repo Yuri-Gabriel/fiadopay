@@ -250,3 +250,15 @@ Unconditional classes:
 2025-11-20T17:28:44.851-03:00  WARN 68977 --- [pool-9-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
 2025-11-20T17:28:47.026-03:00  WARN 68977 --- [pool-10-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
 2025-11-20T17:28:55.269-03:00  WARN 68977 --- [pool-6-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:02.864-03:00  WARN 68977 --- [pool-3-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:07.558-03:00  WARN 68977 --- [pool-2-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
+2025-11-20T17:29:13.122-03:00  WARN 68977 --- [pool-5-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:15.131-03:00  WARN 68977 --- [pool-4-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:18.476-03:00  WARN 68977 --- [pool-7-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:19.274-03:00  INFO 68977 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 27 class path changes (10 additions, 1 deletion, 16 modifications)
+2025-11-20T17:29:19.281-03:00  INFO 68977 --- [Thread-64] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-20T17:29:19.282-03:00  INFO 68977 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-20T17:29:19.289-03:00  INFO 68977 --- [Thread-64] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T17:29:19.290-03:00  WARN 68977 --- [Thread-64] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-11-20T17:29:19.291-03:00  INFO 68977 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2025-11-20T17:29:19.293-03:00  INFO 68977 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
