@@ -18,8 +18,8 @@ import java.util.UUID;
 public class MerchantAdminController {
   private final MerchantRepository merchants;
 
-  @Logger
   @MerchantStatus(Merchant.Status.ACTIVE)
+  @Logger(file = "merchantadmin.log")
   @PostMapping
   public Merchant create(@Valid @RequestBody MerchantCreateDTO dto) {
     if (merchants.existsByName(dto.name())) {

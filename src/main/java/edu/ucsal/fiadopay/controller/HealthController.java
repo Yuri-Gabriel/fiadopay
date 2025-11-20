@@ -8,7 +8,7 @@ import java.util.Map;
 
 @RestController
 public class HealthController {
-  @Logger
+  @Logger(file = "health.log")
   @GetMapping("/fiadopay/health")
   public Map<String,String> health() {
     return Map.of("status","UP");

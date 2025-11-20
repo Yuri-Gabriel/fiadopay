@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 public class AuthController {
   private final MerchantRepository merchants;
 
-  @Logger
+  @Logger(file = "auth.log")
   @PostMapping("/token")
   public TokenResponse token(@RequestBody @Valid TokenRequest req) {
     var merchant = merchants.findByClientId(req.client_id())
