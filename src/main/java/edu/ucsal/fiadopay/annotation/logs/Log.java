@@ -57,13 +57,23 @@ public class Log {
             }
 
             String file = this.log_file == null ? "app.log" : this.log_file;
-            this.fileHandler = new FileHandler("logs/" + file, true);
+
+            this.fileHandler = new FileHandler(
+                System.getProperty("user.dir") + "/logs/" + file,
+                true
+            );
             this.logger.addHandler(this.fileHandler);
             
             Formatter formatter = new LogFormatter();
             this.fileHandler.setFormatter(formatter);
 
             this.logger.setUseParentHandlers(false); 
+
+            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                if (this.fileHandler != null) {
+                    this.fileHandler.close();
+                }
+            }));
 
         } catch (IOException e) {
             e.printStackTrace();
