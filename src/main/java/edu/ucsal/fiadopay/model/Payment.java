@@ -23,7 +23,7 @@ public class Payment {
     @Column(nullable = false)
     private Long merchantId;
 
-    @PaymentMethod(methods = {EPaymentMethod.DEBITO, EPaymentMethod.PIX})
+    @PaymentMethod(methods = {EPaymentMethod.BOLETO, EPaymentMethod.PIX})
     @Column(nullable = false, length = 20)
     private String method;
 
