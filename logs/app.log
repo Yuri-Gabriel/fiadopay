@@ -1,1 +1,264 @@
-17/11/2025 22:33:35.640 - INFO - Função PaymentResponse edu.ucsal.fiadopay.controller.PaymentController.get(String) executada em 125 ms
+2025-11-15T18:50:55.994-03:00  INFO 127589 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-15T18:50:55.994-03:00  INFO 127589 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-15T18:50:55.995-03:00  INFO 127589 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-15T18:50:56.165-03:00  INFO 127589 --- [http-nio-8080-exec-1] edu.ucsal.fiadopay.controller.Teste      : String edu.ucsal.fiadopay.controller.Teste.teste() ---------------------executado em 0 ms
+2025-11-15T19:00:12.771-03:00  INFO 127589 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-15T19:00:12.802-03:00  INFO 127589 --- [Thread-16] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-15T19:00:12.811-03:00  INFO 127589 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-15T19:00:12.814-03:00  INFO 127589 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15T19:00:12.815-03:00  WARN 127589 --- [Thread-16] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-11-15T19:00:12.816-03:00  INFO 127589 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-11-15T19:00:12.820-03:00  INFO 127589 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-11-15T19:00:13.043-03:00  INFO 127589 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : Starting FiadoPayApplication using Java 21.0.7 with PID 127589 (/home/diuri/Documentos/Codigos/trabalhopoo/target/classes started by diuri in /home/diuri/Documentos/Codigos/trabalhopoo)
+2025-11-15T19:00:13.043-03:00  INFO 127589 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-15T19:00:13.370-03:00  INFO 127589 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15T19:00:13.380-03:00  INFO 127589 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2025-11-15T19:00:13.586-03:00  INFO 127589 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-15T19:00:13.589-03:00  INFO 127589 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-15T19:00:13.589-03:00  INFO 127589 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15T19:00:13.616-03:00  INFO 127589 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-15T19:00:13.616-03:00  INFO 127589 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 570 ms
+2025-11-15T19:00:13.727-03:00  INFO 127589 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-15T19:00:13.745-03:00  INFO 127589 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-15T19:00:13.774-03:00  INFO 127589 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15T19:00:13.777-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-11-15T19:00:13.799-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:fiadopay user=SA
+2025-11-15T19:00:13.799-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-11-15T19:00:13.800-03:00  INFO 127589 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-15T19:00:13.992-03:00  INFO 127589 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-15T19:00:14.001-03:00  INFO 127589 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15T19:00:14.373-03:00  WARN 127589 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15T19:00:14.592-03:00  INFO 127589 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:fiadopay'
+2025-11-15T19:00:14.645-03:00  INFO 127589 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-15T19:00:14.659-03:00  INFO 127589 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-15T19:00:14.664-03:00  INFO 127589 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : Started FiadoPayApplication in 1.653 seconds (process running for 1221.894)
+2025-11-15T19:00:14.665-03:00  INFO 127589 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-15T19:00:20.059-03:00  INFO 127589 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-15T19:00:20.062-03:00  INFO 127589 --- [Thread-20] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-15T19:00:20.063-03:00  INFO 127589 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-15T19:00:20.066-03:00  INFO 127589 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15T19:00:20.067-03:00  WARN 127589 --- [Thread-20] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-11-15T19:00:20.067-03:00  INFO 127589 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-11-15T19:00:20.068-03:00  INFO 127589 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-11-15T19:00:20.212-03:00  INFO 127589 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : Starting FiadoPayApplication using Java 21.0.7 with PID 127589 (/home/diuri/Documentos/Codigos/trabalhopoo/target/classes started by diuri in /home/diuri/Documentos/Codigos/trabalhopoo)
+2025-11-15T19:00:20.212-03:00  INFO 127589 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-15T19:00:20.403-03:00  INFO 127589 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15T19:00:20.413-03:00  INFO 127589 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2025-11-15T19:00:20.571-03:00  INFO 127589 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-15T19:00:20.573-03:00  INFO 127589 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-15T19:00:20.574-03:00  INFO 127589 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15T19:00:20.587-03:00  INFO 127589 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-15T19:00:20.588-03:00  INFO 127589 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 375 ms
+2025-11-15T19:00:20.671-03:00  INFO 127589 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-15T19:00:20.673-03:00  INFO 127589 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-15T19:00:20.686-03:00  INFO 127589 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15T19:00:20.687-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-11-15T19:00:20.698-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:fiadopay user=SA
+2025-11-15T19:00:20.698-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-11-15T19:00:20.700-03:00  INFO 127589 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-15T19:00:20.840-03:00  INFO 127589 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-15T19:00:20.862-03:00  INFO 127589 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15T19:00:20.957-03:00  WARN 127589 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authController' defined in file [/home/diuri/Documentos/Codigos/trabalhopoo/target/classes/edu/ucsal/fiadopay/controller/AuthController.class]: Failed to instantiate [edu.ucsal.fiadopay.controller.AuthController]: Constructor threw exception
+2025-11-15T19:00:20.957-03:00  INFO 127589 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15T19:00:20.958-03:00  WARN 127589 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-11-15T19:00:20.959-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-11-15T19:00:20.972-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-11-15T19:00:20.973-03:00  INFO 127589 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-15T19:00:20.979-03:00  INFO 127589 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-15T19:00:21.053-03:00 ERROR 127589 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authController' defined in file [/home/diuri/Documentos/Codigos/trabalhopoo/target/classes/edu/ucsal/fiadopay/controller/AuthController.class]: Failed to instantiate [edu.ucsal.fiadopay.controller.AuthController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at edu.ucsal.fiadopay.FiadoPayApplication.main(FiadoPayApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [edu.ucsal.fiadopay.controller.AuthController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	A cannot be resolved to a type
+
+	at edu.ucsal.fiadopay.controller.AuthController.<init>(AuthController.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 26 common frames omitted
+
+2025-11-15T19:00:30.566-03:00  INFO 127589 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : Starting FiadoPayApplication using Java 21.0.7 with PID 127589 (/home/diuri/Documentos/Codigos/trabalhopoo/target/classes started by diuri in /home/diuri/Documentos/Codigos/trabalhopoo)
+2025-11-15T19:00:30.568-03:00  INFO 127589 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-15T19:00:30.851-03:00  INFO 127589 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-15T19:00:30.859-03:00  INFO 127589 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2025-11-15T19:00:30.983-03:00  INFO 127589 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-15T19:00:30.985-03:00  INFO 127589 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-15T19:00:30.985-03:00  INFO 127589 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-15T19:00:30.994-03:00  INFO 127589 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-11-15T19:00:30.994-03:00  INFO 127589 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 415 ms
+2025-11-15T19:00:31.056-03:00  INFO 127589 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-15T19:00:31.058-03:00  INFO 127589 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-15T19:00:31.064-03:00  INFO 127589 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-15T19:00:31.065-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-11-15T19:00:31.066-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn56: url=jdbc:h2:mem:fiadopay user=SA
+2025-11-15T19:00:31.066-03:00  INFO 127589 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-11-15T19:00:31.067-03:00  INFO 127589 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-15T19:00:31.145-03:00  INFO 127589 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-15T19:00:31.152-03:00  INFO 127589 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15T19:00:31.383-03:00  WARN 127589 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-15T19:00:31.555-03:00  INFO 127589 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:fiadopay'
+2025-11-15T19:00:31.609-03:00  INFO 127589 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-15T19:00:31.630-03:00  INFO 127589 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-15T19:00:31.635-03:00  INFO 127589 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : Started FiadoPayApplication in 1.107 seconds (process running for 1238.864)
+2025-11-15T19:00:31.636-03:00  INFO 127589 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-15T19:07:16.237-03:00  INFO 127589 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-15T19:07:16.238-03:00  INFO 127589 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-15T19:07:16.240-03:00  INFO 127589 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-15T19:07:16.241-03:00  WARN 127589 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-11-15T19:07:16.242-03:00  INFO 127589 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-11-15T19:07:16.242-03:00  INFO 127589 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2025-11-20T17:27:58.208-03:00  INFO 68977 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : Starting FiadoPayApplication using Java 21.0.7 with PID 68977 (/home/diuri/Documentos/Codigos/trabalhopoo/target/classes started by diuri in /home/diuri/Documentos/Codigos/trabalhopoo)
+2025-11-20T17:27:58.208-03:00  INFO 68977 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-11-20T17:27:58.476-03:00  WARN 68977 --- [pool-7-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:27:58.616-03:00  INFO 68977 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20T17:27:58.636-03:00  INFO 68977 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2025-11-20T17:27:58.892-03:00  INFO 68977 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-20T17:27:58.895-03:00  INFO 68977 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20T17:27:58.895-03:00  INFO 68977 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-20T17:27:58.908-03:00  INFO 68977 --- [restartedMain] o.a.c.c.C.[Tomcat-8].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-11-20T17:27:58.908-03:00  INFO 68977 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 693 ms
+2025-11-20T17:27:58.995-03:00  INFO 68977 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20T17:27:58.998-03:00  INFO 68977 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-20T17:27:59.012-03:00  INFO 68977 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20T17:27:59.014-03:00  INFO 68977 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2025-11-20T17:27:59.017-03:00  INFO 68977 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection conn118: url=jdbc:h2:mem:fiadopay user=SA
+2025-11-20T17:27:59.018-03:00  INFO 68977 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2025-11-20T17:27:59.019-03:00  INFO 68977 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-18)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20T17:27:59.142-03:00  INFO 68977 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20T17:27:59.154-03:00  INFO 68977 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T17:27:59.489-03:00  WARN 68977 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20T17:27:59.673-03:00  INFO 68977 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:fiadopay'
+2025-11-20T17:27:59.732-03:00  INFO 68977 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-20T17:27:59.752-03:00  INFO 68977 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-20T17:27:59.760-03:00  INFO 68977 --- [restartedMain] edu.ucsal.fiadopay.FiadoPayApplication   : Started FiadoPayApplication in 1.671 seconds (process running for 326.492)
+2025-11-20T17:27:59.767-03:00  INFO 68977 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration#applicationTaskExecutorAsyncConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+
+Negative matches:
+-----------------
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-11-20T17:28:00.620-03:00  WARN 68977 --- [pool-8-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
+2025-11-20T17:28:04.851-03:00  WARN 68977 --- [pool-9-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:28:07.026-03:00  WARN 68977 --- [pool-10-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
+2025-11-20T17:28:15.269-03:00  WARN 68977 --- [pool-6-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:28:22.864-03:00  WARN 68977 --- [pool-3-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
+2025-11-20T17:28:27.558-03:00  WARN 68977 --- [pool-2-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
+2025-11-20T17:28:33.122-03:00  WARN 68977 --- [pool-5-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:28:35.131-03:00  WARN 68977 --- [pool-4-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:28:38.476-03:00  WARN 68977 --- [pool-7-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
+2025-11-20T17:28:40.620-03:00  WARN 68977 --- [pool-8-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:28:44.851-03:00  WARN 68977 --- [pool-9-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:28:47.026-03:00  WARN 68977 --- [pool-10-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
+2025-11-20T17:28:55.269-03:00  WARN 68977 --- [pool-6-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:02.864-03:00  WARN 68977 --- [pool-3-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:07.558-03:00  WARN 68977 --- [pool-2-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 40000ms
+2025-11-20T17:29:13.122-03:00  WARN 68977 --- [pool-5-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:15.131-03:00  WARN 68977 --- [pool-4-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:18.476-03:00  WARN 68977 --- [pool-7-thread-1] e.ucsal.fiadopay.service.PaymentService  :  WATCHDOG: 39999ms
+2025-11-20T17:29:19.274-03:00  INFO 68977 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 27 class path changes (10 additions, 1 deletion, 16 modifications)
+2025-11-20T17:29:19.281-03:00  INFO 68977 --- [Thread-64] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-20T17:29:19.282-03:00  INFO 68977 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-20T17:29:19.289-03:00  INFO 68977 --- [Thread-64] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T17:29:19.290-03:00  WARN 68977 --- [Thread-64] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-11-20T17:29:19.291-03:00  INFO 68977 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2025-11-20T17:29:19.293-03:00  INFO 68977 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.

@@ -1,6 +1,7 @@
 package edu.ucsal.fiadopay.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -23,7 +24,8 @@ public class Payment {
     @Column(nullable = false)
     private Long merchantId;
 
-    @PaymentMethod(methods = {EPaymentMethod.BOLETO, EPaymentMethod.PIX})
+    @Valid
+    @PaymentMethod(methods = {EPaymentMethod.DEBITO, EPaymentMethod.PIX})
     @Column(nullable = false, length = 20)
     private String method;
 

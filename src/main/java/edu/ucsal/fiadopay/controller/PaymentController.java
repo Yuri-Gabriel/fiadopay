@@ -19,7 +19,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 public class PaymentController {
   private final PaymentService service;
 
-  @Logger
+  @Logger(file = "payment.log")
   @PostMapping("/payments")
   @SecurityRequirement(name = "bearerAuth")
   public ResponseEntity<PaymentResponse> create(
@@ -31,13 +31,13 @@ public class PaymentController {
     return ResponseEntity.status(HttpStatus.CREATED).body(resp);
   }
 
-  @Logger
+  @Logger(file = "payment.log")
   @GetMapping("/payments/{id}")
   public PaymentResponse get(@PathVariable String id) {
     return service.getPayment(id);
   }
 
-  @Logger
+  @Logger(file = "payment.log")
   @PostMapping("/refunds")
   @Refundable(days = 20)
   @SecurityRequirement(name = "bearerAuth")
