@@ -1,6 +1,7 @@
 package edu.ucsal.fiadopay.controller;
 
 import edu.ucsal.fiadopay.annotation.logs.Logger;
+import edu.ucsal.fiadopay.annotation.merchant.MerchantStatus;
 import edu.ucsal.fiadopay.controller.dto.MerchantCreateDTO;
 import edu.ucsal.fiadopay.model.Merchant;
 import edu.ucsal.fiadopay.repo.MerchantRepository;
@@ -18,6 +19,7 @@ public class MerchantAdminController {
   private final MerchantRepository merchants;
 
   @Logger
+  @MerchantStatus(Merchant.Status.ACTIVE)
   @PostMapping
   public Merchant create(@Valid @RequestBody MerchantCreateDTO dto) {
     if (merchants.existsByName(dto.name())) {

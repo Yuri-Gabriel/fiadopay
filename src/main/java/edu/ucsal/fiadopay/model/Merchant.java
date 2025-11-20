@@ -1,7 +1,8 @@
 package edu.ucsal.fiadopay.model;
 
+import edu.ucsal.fiadopay.annotation.merchant.MerchantStatus;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.*; 
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
@@ -20,8 +21,13 @@ public class Merchant {
 
     private String webhookUrl;
 
-    @Enumerated(EnumType.STRING)
+    @Builder.Default
+    @Enumerated(EnumType.STRING) 
     private Status status = Status.ACTIVE;
 
     public enum Status { ACTIVE, BLOCKED }
+
+    public Status getMerchantStatus() {
+        return this.status;
+    }
 }
