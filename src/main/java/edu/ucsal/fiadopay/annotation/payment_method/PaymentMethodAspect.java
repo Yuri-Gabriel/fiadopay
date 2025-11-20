@@ -1,5 +1,7 @@
 package edu.ucsal.fiadopay.annotation.payment_method;
 
+import java.lang.reflect.Field;
+
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -40,7 +42,7 @@ public class PaymentMethodAspect {
         try {
             Field field = target.getClass().getDeclaredField("method");
             field.setAccessible(true);
-            return (Strign) field.get(target);
+            return (String) field.get(target);
         } catch (Exception e) {
             throw new RuntimeException("Objeto não possui campo 'status'.");
         }
