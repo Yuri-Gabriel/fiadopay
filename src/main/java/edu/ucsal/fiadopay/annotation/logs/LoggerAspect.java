@@ -13,17 +13,22 @@ import edu.ucsal.fiadopay.annotation.logs.Logger;
 public class LoggerAspect {
 
     @Around("@annotation(Logger)")
-    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+    public Object around(ProceedingJoinPoint joinPoint, Logger logger) throws Throwable {
+        System.out.println("log: " + logger.file());
+        
         long inicio = System.currentTimeMillis();
+        
         Object result = joinPoint.proceed();
-        Thread.sleep(100);
+        
         long fim = System.currentTimeMillis();
+
         long tempoMs = fim - inicio;
 
-        Log log = Log.getInstance();
+        Log log = Log.getInstance(logger.file());
         log.info(
             String.format("Função %s executada em %d ms", joinPoint.getSignature(), tempoMs)
         );
+
         return result;
     }
 }
