@@ -1,6 +1,7 @@
 package edu.ucsal.fiadopay.controller;
 
 import edu.ucsal.fiadopay.annotation.logs.Logger;
+import edu.ucsal.fiadopay.annotation.VelocityCheck;
 import edu.ucsal.fiadopay.annotation.refundable.Refundable;
 import edu.ucsal.fiadopay.controller.request.PaymentRequest;
 import edu.ucsal.fiadopay.controller.request.RefundRequest;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import jakarta.validation.Valid;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import edu.ucsal.fiadopay.annotation.Currency;
 
 @RestController
 @RequestMapping("/fiadopay/gateway")
@@ -19,6 +21,8 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 public class PaymentController {
   private final PaymentService service;
 
+  @VelocityCheck(maxAttempts = 5, timeWindowSeconds = 60) // 5 tentativas por IP/minuto
+  @Currency(allowed = {"BRL"})
   @Logger(file = "payment.log")
   @PostMapping("/payments")
   @SecurityRequirement(name = "bearerAuth")
