@@ -8,5 +8,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Logger { 
-    String file() default "app.log";
- }
+    String file() default "route.log";
+}
