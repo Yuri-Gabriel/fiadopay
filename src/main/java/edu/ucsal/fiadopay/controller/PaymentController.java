@@ -3,8 +3,8 @@ package edu.ucsal.fiadopay.controller;
 import edu.ucsal.fiadopay.annotation.logs.Logger;
 
 import edu.ucsal.fiadopay.controller.request.PaymentRequest;
-import edu.ucsal.fiadopay.controller.request.RefundRequest;
 import edu.ucsal.fiadopay.controller.response.PaymentResponse;
+import edu.ucsal.fiadopay.annotation.routes.DeprecatedRoute;
 import edu.ucsal.fiadopay.service.PaymentService;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -24,9 +24,8 @@ public class PaymentController {
   @SecurityRequirement(name = "bearerAuth")
   public ResponseEntity<PaymentResponse> create(
       @Parameter(hidden = true) @RequestHeader("Authorization") String auth,
-      @RequestHeader(value="Idempotency-Key", required=false) String idemKey,
-      @RequestBody @Valid PaymentRequest req
-  ) {
+      @RequestHeader(value = "Idempotency-Key", required = false) String idemKey,
+      @RequestBody @Valid PaymentRequest req) {
     var resp = service.createPayment(auth, idemKey, req);
     return ResponseEntity.status(HttpStatus.CREATED).body(resp);
   }
@@ -37,11 +36,14 @@ public class PaymentController {
     return service.getPayment(id);
   }
 
+  // Rota criada para teste da DeprecatedRoute
   @Logger(file = "payment.log")
-  @PostMapping("/refunds")
-  @SecurityRequirement(name = "bearerAuth")
-  public java.util.Map<String,Object> refund(@Parameter(hidden = true) @RequestHeader("Authorization") String auth,
-                                   @RequestBody @Valid RefundRequest body) {
-    return service.refund(auth, body.paymentId());
+  @DeprecatedRoute(replacedBy = "/fiadopay/gateway/payments", sinceVersion = "1.0", removalVersion = "2.0", reason = "Use /fiadopay/gateway/payments (nova rota padrão)")
+  @PostMapping("/v34/payment")
+  public ResponseEntity<PaymentResponse> createDeprecated(
+      @Parameter(hidden = true) @RequestHeader("Authorization") String auth,
+      @RequestBody @Valid PaymentRequest req) {
+    var resp = service.createPayment(auth, null, req);
+    return ResponseEntity.status(HttpStatus.CREATED).body(resp);
   }
 }
