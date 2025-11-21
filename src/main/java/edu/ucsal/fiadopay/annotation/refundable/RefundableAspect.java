@@ -8,13 +8,10 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
-import edu.ucsal.fiadopay.annotation.logs.Logger;
 
 @Aspect
 @Component
 public class RefundableAspect {
-
-  @Logger
   @Around("@annotation(refundable)")
   public Object around(ProceedingJoinPoint joinPoint, Refundable refundable) throws Throwable {
     Object result = joinPoint.proceed();

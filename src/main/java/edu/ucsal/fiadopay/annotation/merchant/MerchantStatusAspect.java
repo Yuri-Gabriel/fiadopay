@@ -7,12 +7,9 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-import edu.ucsal.fiadopay.annotation.logs.Logger;
-
 @Aspect
 @Component
 public class MerchantStatusAspect {
-  @Logger
   @Around("@annotation(merchantstatus)")
   public Object around(ProceedingJoinPoint joinPoint, MerchantStatus merchantStatus) throws Throwable {
 
